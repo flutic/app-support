@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CarcBot Support</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #666666;
+    --accent: #0066cc;
+    --border: #e5e5e5;
+    --card-bg: #f7f7f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1a1a;
+      --text: #f0f0f0;
+      --muted: #999999;
+      --accent: #5eabff;
+      --border: #333333;
+      --card-bg: #252525;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--bg);
+    margin: 0;
+    padding: 2rem 1rem;
+  }
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 0.25rem;
+  }
+  .tagline {
+    color: var(--muted);
+    margin: 0 0 2rem;
+    font-size: 1.05rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.5rem 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  p { margin: 0.75rem 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .contact {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+  }
+  .contact a {
+    font-weight: 600;
+    word-break: break-all;
+  }
+  details {
+    border-bottom: 1px solid var(--border);
+    padding: 0.85rem 0;
+  }
+  details:last-of-type { border-bottom: none; }
+  details summary {
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    padding-right: 1.5rem;
+    position: relative;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--muted);
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+  details[open] summary::after { content: "−"; }
+  details p {
+    margin-top: 0.6rem;
+    color: var(--muted);
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>CarcBot Support</h1>
+  <p class="tagline">Generate edge-matched tile maps, cubes, globes, and decorated scenes.</p>
+
+  <h2>Contact</h2>
+  <p>If you have a question, a bug report, or a feature request, please email:</p>
+  <div class="contact">
+    <a href="mailto:north_events_5f@icloud.com?subject=CarcBot%20Support">north_events_5f@icloud.com</a>
+  </div>
+  <p>We read every message. When reporting a bug, please include your iPhone or iPad model, your iOS version, and a brief description of what you were doing when the issue occurred.</p>
+
+  <h2>Frequently asked questions</h2>
+
+  <details>
+    <summary>What tile bundle comes with the app?</summary>
+    <p>CarcBot ships with a built-in <strong>Sample Pack</strong> of simple, edge-matched tiles so you can start generating maps the first time you open the app. The sample pack is read-only to protect the default experience &mdash; if you want to change it, tap <strong>Duplicate</strong> to create an editable copy.</p>
+  </details>
+
+  <details>
+    <summary>How do I add a new tile set?</summary>
+    <p>Open the configuration screen and tap <strong>Tile Bundles</strong>. From there you can <strong>Import .carcpack</strong> to install a bundle you&rsquo;ve been sent, or choose <strong>New Bundle</strong> to build one from scratch on device. You can also <strong>Duplicate</strong> any installed bundle as a starting point.</p>
+  </details>
+
+  <details>
+    <summary>Can I edit tiles inside the app?</summary>
+    <p>Yes. Tap any bundle in the Tile Bundles list to open the editor. You can add tiles, change their edges (City, Road, Field, River), rename them, rotate their images, switch between the square and triangle sections, and delete entries. Changes are saved immediately. The sample pack is read-only &mdash; duplicate it first if you want to edit.</p>
+  </details>
+
+  <details>
+    <summary>Why are the River 1, River 2, Castle, or Count buttons greyed out?</summary>
+    <p>Those buttons light up only when the currently installed bundles actually contain tiles tagged with the corresponding set. The sample pack contains basic fill tiles only, so those special sets stay disabled until you install or create a bundle that includes them.</p>
+  </details>
+
+  <details>
+    <summary>Map generation fails even though there seem to be enough tiles.</summary>
+    <p>CarcBot tries many random placements and gives up after too many failed attempts. Some configurations (very small grids with special sets enabled, or Castle composites on small grids) can be impossible to satisfy. The warning banner on the configuration screen flags common cases. Try a larger grid, fewer special sets, or relax the <strong>Exclude Edge</strong> setting.</p>
+  </details>
+
+  <details>
+    <summary>How do I save a generated map?</summary>
+    <p>After generating, tap <strong>Save</strong> on the preview screen to write a full-resolution PNG to your Photos library. You can also save the Cube, RCO, and Globe nets, and export spinning rotation videos of the 3D shapes.</p>
+  </details>
+
+  <details>
+    <summary>How do I use the Manual Map Editor?</summary>
+    <p>Tap <strong>Edit</strong> on the configuration screen to open a blank grid, or open a saved map. Pick a tile from the palette and tap a grid cell to place it. Tap a placed tile to rotate or delete it. The <strong>Filter</strong> tool narrows the palette to tiles compatible with a selected cell&rsquo;s neighbours and auto-rotates them when placed. Mismatched edges are highlighted in red.</p>
+  </details>
+
+  <details>
+    <summary>What is Decorate Mode?</summary>
+    <p>From the map editor toolbar, tap <strong>Decorate</strong> to see your map as a 3D tabletop. Tap to place meeple figures in six types and eight colours. Long-press a figure to lay it down; tap it to rotate, resize, or remove it. You can import your own 3D models from OBJ files, and save the decorated scene to Photos.</p>
+  </details>
+
+  <details>
+    <summary>Do my saved maps sync between my iPhone and iPad?</summary>
+    <p>Yes, if you have iCloud Drive enabled and are signed in with the same Apple ID on both devices. Saved maps live in CarcBot&rsquo;s iCloud container and propagate automatically. You can disable this in iOS Settings &rarr; iCloud &rarr; iCloud Drive if you prefer local-only storage.</p>
+  </details>
+
+  <details>
+    <summary>Does CarcBot upload anything?</summary>
+    <p>No. CarcBot processes everything on your device. It contains no analytics, no ads, no third-party SDKs, and makes no network requests to our servers. See our <a href="carcbot-privacy.html">privacy policy</a> for details.</p>
+  </details>
+
+  <footer>
+    <p>See our <a href="carcbot-privacy.html">privacy policy</a>.</p>
+  </footer>
+</main>
+</body>
+</html>
